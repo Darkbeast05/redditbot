@@ -1,8 +1,10 @@
-import praw
-import urllib.request
+import praw, os
 from praw.models import MoreComments
+from boto.s3.connection import S3Connection
 
-reddit = praw.Reddit(user_agent="Useless v0.1 by /u/PasswordPrevention",site_name="bot")
+s3 = S3Connection(os.environ['PASS'], os.environ['SECRET'])
+
+reddit = praw.Reddit(user_agent="Useless v0.1 by /u/PasswordPrevention", client_id='tsfUXGBvO_3ASw', client_secret=os.environ['SECRET'], username='UselessBotFF', password=os.environ['PASS'])
 sub = reddit.subreddit("testingground4bots")
 for submission in sub.new(limit=60):
     submission.comments.replace_more(limit=0)
