@@ -1,1 +1,2 @@
-# redditbot
+# Redditbot
+How did you get here?
