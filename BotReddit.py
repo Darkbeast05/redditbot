@@ -11,7 +11,7 @@ while True:
                 continue
             if "!summonbot1" in comment.body:
                 isme = False
-                sys.stdout.write("found")
+                print("found")
                 for reply in comment.replies:
                     if reply.author == reddit.redditor("UselessBotFF"):
                         isme=True
@@ -21,6 +21,8 @@ while True:
                         split.reverse()
                         split.pop()
                         if split.pop() =='toHex':
-                            comment.reply((''.join(hex(ord(x))[2:] for x in split.pop()) + "/n/n/n Am a bot."))
-                sys.stdout.write(isme)
+                            g=split.pop()
+                            comment.reply((''.join(hex(ord(x))[2:] for x in g) + "/n/n/n Am a bot."))
+                            print((''.join(hex(ord(x))[2:] for x in g) + "/n/n/n Am a bot."))
+                print(isme)
                 time.sleep(20)
