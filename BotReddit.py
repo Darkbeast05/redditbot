@@ -2,14 +2,14 @@ import praw, os, time
 from praw.models import MoreComments
 
 reddit = praw.Reddit(user_agent="Useless v0.1 by /u/PasswordPrevention", client_id='tsfUXGBvO_3ASw', client_secret=os.environ['SECRET'], username='UselessBotFF', password=os.environ['PASS'])
-sub = reddit.subreddit("testingground4bots")
+sub = reddit.subreddit("all")
 while True:
     for submission in sub.new(limit=60):
         submission.comments.replace_more(limit=0)
         for comment in submission.comments.list():
             if isinstance(comment, MoreComments):
                 continue
-            if "!summonbot1" in comment.body:
+            if "!summonbotFF" in comment.body:
                 isme = False
                 print("found")
                 for reply in comment.replies:
