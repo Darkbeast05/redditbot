@@ -1,4 +1,4 @@
-import praw, os
+import praw, os, time
 from praw.models import MoreComments
 from boto.s3.connection import S3Connection
 
@@ -26,4 +26,4 @@ while True:
                         if split.pop() =='toHex':
                             comment.reply((''.join(hex(ord(x))[2:] for x in split.pop()) + "/n/n/n Am a bot."))
                 print(isme)
-                sleep(20)
+                time.sleep(20)
