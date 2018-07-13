@@ -22,7 +22,7 @@ while True:
                         split.pop()
                         if split.pop() =='toHex':
                             g=split.pop()
-                            comment.reply((''.join(hex(ord(x))[2:] for x in g) + "/n/n/n Am a bot."))
-                            print((''.join(hex(ord(x))[2:] for x in g) + "/n/n/n Am a bot."))
+                            comment.reply((''.join(hex(ord(x))[2:] for x in g) + "\n\n\n Am a bot."))
+                            print((''.join(hex(ord(x))[2:] for x in g) + "\n\n\n Am a bot."))
                 print(isme)
                 time.sleep(20)
