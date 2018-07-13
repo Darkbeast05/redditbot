@@ -1,1 +1,1 @@
-worker: python BotReddit.py
+web: python BotReddit.py
