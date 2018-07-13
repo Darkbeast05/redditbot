@@ -2,7 +2,7 @@ import praw, os, time
 from praw.models import MoreComments
 
 reddit = praw.Reddit(user_agent="Useless v0.1 by /u/PasswordPrevention", client_id='tsfUXGBvO_3ASw', client_secret=os.environ['SECRET'], username='UselessBotFF', password=os.environ['PASS'])
-sub = reddit.subreddit("all")
+sub = reddit.subreddit("testingground4bots")
 while True:
     for submission in sub.new(limit=6000):
         submission.comments.replace_more(limit=0)
